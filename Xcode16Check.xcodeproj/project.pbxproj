@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -45,6 +45,57 @@
 		02C57D5F2C183B6400BB0E48 /* Xcode16CheckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Xcode16CheckUITests.swift; sourceTree = "<group>"; };
 		02C57D612C183B6400BB0E48 /* Xcode16CheckUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Xcode16CheckUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		02C57D742C183B9900BB0E48 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ItemDto.swift,
+			);
+			target = 02C57D402C183B6300BB0E48 /* Xcode16Check */;
+		};
+		02C57D792C183CB600BB0E48 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				NewScrollView/MovieDetailView.swift,
+				NewTabViewExample/NewTabViewExampleView.swift,
+				Previewable/PreviewableExampleView.swift,
+				PreviewModifier/DataFetcher/MovieFetcher.swift,
+				PreviewModifier/PreviewModifierExample.swift,
+				ScrollPhaseChange/ScrollPhaseChangeExampleView.swift,
+				ScrollPosition/ScrollPositionExampleView.swift,
+				ScrollVisibility/ScrollVisibilityExample.swift,
+				ZoomAnimation/ZoomAnimationExampleView.swift,
+			);
+			target = 02C57D402C183B6300BB0E48 /* Xcode16Check */;
+		};
+		02C57D842C18438000BB0E48 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CustomUI/CustomPageIndicator.swift,
+				CustomUI/LoopingScrollView.swift,
+				DeviceTypeDetector.swift,
+				PreviewModifiers/MovieFetcherPreviewModifier.swift,
+				ViewModifiers/DeviceRotationModifier.swift,
+				ViewModifiers/OnLoadModifier.swift,
+			);
+			target = 02C57D402C183B6300BB0E48 /* Xcode16Check */;
+		};
+		02C57D982C18BCBA00BB0E48 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Route.swift,
+			);
+			target = 02C57D402C183B6300BB0E48 /* Xcode16Check */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		02C57D712C183B9400BB0E48 /* Models */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (02C57D742C183B9900BB0E48 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Models; sourceTree = "<group>"; };
+		02C57D752C183CB300BB0E48 /* Examples */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (02C57D792C183CB600BB0E48 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Examples; sourceTree = "<group>"; };
+		02C57D7D2C183CC700BB0E48 /* Utilis */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (02C57D842C18438000BB0E48 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Utilis; sourceTree = "<group>"; };
+		02C57D952C18BCB400BB0E48 /* Navigation */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (02C57D982C18BCBA00BB0E48 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Navigation; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		02C57D3E2C183B6300BB0E48 /* Frameworks */ = {
@@ -94,6 +145,10 @@
 		02C57D432C183B6300BB0E48 /* Xcode16Check */ = {
 			isa = PBXGroup;
 			children = (
+				02C57D952C18BCB400BB0E48 /* Navigation */,
+				02C57D7D2C183CC700BB0E48 /* Utilis */,
+				02C57D712C183B9400BB0E48 /* Models */,
+				02C57D752C183CB300BB0E48 /* Examples */,
 				02C57D442C183B6300BB0E48 /* Xcode16CheckApp.swift */,
 				02C57D462C183B6300BB0E48 /* ContentView.swift */,
 				02C57D482C183B6400BB0E48 /* Assets.xcassets */,
@@ -428,8 +483,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -437,6 +492,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leopoldromanowski.Xcode16Check;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -457,8 +516,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,6 +525,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leopoldromanowski.Xcode16Check;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -1,21 +1,26 @@
-//
-//  ContentView.swift
-//  Xcode16Check
-//
-//  Created by Leopold Romanowski on 11/06/2024.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var route: [Route] = []
+    @Namespace private var movieDetailAnimation
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack(path: $route) {
+            ZoomAnimationExampleView(route: $route, movieDetailAnimation: movieDetailAnimation)
+                .navigationDestination(for: Route.self) { destination in
+                    switch destination {
+                    case .imageDetail(let movie):
+                        MovieDetailView(movie: movie)
+                            .navigationTransition(
+                                .zoom(
+                                    sourceID: movie.id,
+                                    in: movieDetailAnimation
+                                )
+                            )
+                    }
+                }
         }
-        .padding()
     }
 }
 
